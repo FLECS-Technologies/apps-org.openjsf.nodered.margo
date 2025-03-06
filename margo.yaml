@@ -1,0 +1,14 @@
+apiVersion: margo.org/v1-alpha1
+kind: application
+metadata: 
+  id: org-openjsf-nodered-margo
+  name: Node-RED
+  description: No-code IoT Suite
+  version: 4.0.9
+deploymentProfiles: 
+    - type: docker-compose
+    components: 
+        - name: org.openjsf.nodered.margo
+          properties: 
+            repository: flecs.azurecr.io/org.openjsf.nodered.margo
+            revision: 4.0.9
